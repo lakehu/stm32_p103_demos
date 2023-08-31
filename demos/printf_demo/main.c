@@ -15,7 +15,7 @@ int main(void)
     char *str1="Strings";
     char ch1='Z';
 
-    //first init myprintf device(usart2)
+    //first init myprintf device(usart1)
     myprintf_init();
     while(1) {
         myprintf("test num %d=0x%x str %s ch %c\n",num1,num1,str1,ch1);

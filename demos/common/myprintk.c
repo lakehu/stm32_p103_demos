@@ -36,9 +36,9 @@ void myprintf_init()
 
 void usart_send_bytes(uint8_t data)
 {
-    while(!USART_GetFlagStatus(USART2 ,USART_FLAG_TXE)) {
+    while(!USART_GetFlagStatus(USART1 ,USART_FLAG_TXE)) {
     }
-    USART_SendData( USART2, data);
+    USART_SendData( USART1, data);
 }
 
 

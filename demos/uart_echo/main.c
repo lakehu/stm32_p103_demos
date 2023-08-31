@@ -8,14 +8,14 @@ int main(void)
     init_led();
 
     init_rs232();
-    USART_Cmd(USART2, ENABLE);
+    USART_Cmd(USART1, ENABLE);
 
     while(1) {
-        /* Loop until the USART2 has received a byte. */
-        while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == RESET);
+        /* Loop until the USART1 has received a byte. */
+        while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
 
         /* Capture the received byte and print it out. */
-        b = (USART_ReceiveData(USART2) & 0x7F);
+        b = (USART_ReceiveData(USART1) & 0x7F);
         send_byte('G');
         send_byte('o');
         send_byte('t');
