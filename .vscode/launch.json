@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Cortex-M3",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/demos/printf_demo/main.elf",
+      "MIMode": "gdb",
+      "miDebuggerPath": "arm-none-eabi-gdb",
+      "targetArchitecture": "arm",
+      "miDebuggerServerAddress": "localhost:1234",
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "preLaunchTask": "build and run qemu",
+      "postDebugTask": "Kill QEMU",
+      "setupCommands": [
+        {
+          "text": "dir .",
+          "ignoreFailures": false
+        },
+        {
+          "text": "add-auto-load-safe-path ./",
+          "ignoreFailures": false
+        },
+        {
+          "description": "Set sysroot ",
+          "text": "set sysroot ./"
+     },
+     {
+          "description": "Set solib",
+          "text": "set solib-search-path ./"
+     },
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true,
+          //"set follow-fork-mode":"child"
+      },
+      ]
+    }
+  ]
+}
