@@ -256,7 +256,7 @@ demos/uart_echo/main.elf: $(COMMON_FILES)
 
 demos/printf_demo/main.elf: demos/printf_demo/main.c
 demos/printf_demo/main.elf: $(COMMON_FILES)
-	$(CC) $(CFLAGS_LINK) -Idemos/printf_demo/ -o $@ $^
+	$(CC) $(CFLAGS_LINK) -ggdb -Idemos/printf_demo/ -o $@ $^
 
 demos/uart_repeat_write/main.elf: demos/uart_repeat_write/main.c
 demos/uart_repeat_write/main.elf: $(COMMON_FILES)

@@ -2,7 +2,8 @@ ENTRY(main)
 MEMORY
 {
   FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 128K
-  RAM (rwx) : ORIGIN = 0x20000000, LENGTH = 20K
+/*  RAM (rwx) : ORIGIN = 0x20000000, LENGTH =  8K  qemu standard version for stm32vldiscovery 8k/SRAM */
+  RAM (rwx) : ORIGIN = 0x20000000, LENGTH =  20K
 
 }
 
