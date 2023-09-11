@@ -17,12 +17,12 @@
 		{
 			"label": "Start QEMU",
 			"type": "shell",
-			"command": "${env:HOME}/usr/bin/qemu2.1.3-system-arm-stm",
+			"command": "${env:HOME}/usr/bin/qemu-system-arm",
 			"args": [
-				"-M", "stm32-p103",
+				"-M", "stm32-f103c8",
 				"-nographic",
 				"-d", "int,guest_errors", // generate info log to avoid problemMatcher can't match empty output 
-				"-kernel", "${workspaceFolder}/demos/blink_flash/main.bin",
+				"-kernel", "${workspaceFolder}/demos/printf_demo/main.bin",
 				"-S",   // Start with GDB server paused
 				"-s"    // Listen for incoming GDB connection
 			],

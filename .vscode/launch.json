@@ -5,7 +5,7 @@
       "name": "Debug Cortex-M3",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/demos/blink_flash/main.elf",
+      "program": "${workspaceFolder}/demos/printf_demo/main.elf",
       "MIMode": "gdb",
       "miDebuggerPath": "arm-none-eabi-gdb",
       "targetArchitecture": "arm",
